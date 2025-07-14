@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: bd-courier-checker
+    env: python
+    plan: free
+    buildCommand: ""
+    startCommand: gunicorn app:app
+    envVars:
+      - key: SECRET_KEY
+        value: your-secret-key
+      - key: API_KEY
+        value: your-api-key
